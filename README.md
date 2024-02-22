@@ -13,12 +13,12 @@ Note: Ensure that `rtos_hw_drivers.c` and `rtos_hw_drivers.h` are added to the s
 - Properties → Resource → Linked Resources → New → `TivaWare`: `\ti\TivaWare_C_Series-2.2.0.295`
 - Properties → Resource → Build → Variables → Add → `TivaWare`: `\ti\TivaWare_C_Series-2.2.0.295`
 - Properties → Resource → Build → Arm Compiler → Include Option → Add → Variables:
-    `${TivaWare}`
-    `${TivaWare}/examples/boards/ek-tm4c123gxl`
-    `${TivaWare}/third_party`
-    `${TivaWare}/third_party/FreeRTOS`
-    `${TivaWare}/third_party/FreeRTOS/Source/include`
-    `${TivaWare}/third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F`
+   - `${TivaWare}`
+   - `${TivaWare}/examples/boards/ek-tm4c123gxl`
+   - `${TivaWare}/third_party`
+   - `${TivaWare}/third_party/FreeRTOS`
+   - `${TivaWare}/third_party/FreeRTOS/Source/include`
+   - `${TivaWare}/third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F`
 
 - Properties → Resource → Build → Arm Linker → File Search Path → Include library file or command file as input → Variables → `${TivaWare}/driverlib/ccs/Debug/driverlib.lib`
 - New → Header File → FreeRTOSConfig.h
