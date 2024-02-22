@@ -1,4 +1,4 @@
-# TivaWare and FreeRTOS Configuration Guide
+# TivaC - EK-TM4C123GXL and FreeRTOS Configuration Guide
 
 ## Prerequisites
 
@@ -8,8 +8,10 @@
 
 ## Configuration Steps
 
-- Properties → Resource → Linked Resources → New → `TivaWare`: C:\ti\TivaWare_C_Series-2.2.0.295
-- Properties → Resource → Build → Variables → Add → `TivaWare`: C:\ti\TivaWare_C_Series-2.2.0.295
+Note: Ensure that `rtos_hw_drivers.c` and `rtos_hw_drivers.h` are added to the specified directory `\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers`. These files are necessary for the example drivers to function properly.
+
+- Properties → Resource → Linked Resources → New → `TivaWare`: `\ti\TivaWare_C_Series-2.2.0.295`
+- Properties → Resource → Build → Variables → Add → `TivaWare`: `\ti\TivaWare_C_Series-2.2.0.295`
 - Properties → Resource → Build → Arm Compiler → Include Option → Add → Variables:
     `${TivaWare}`
     `${TivaWare}/examples/boards/ek-tm4c123gxl`
@@ -143,7 +145,7 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 
 ```
 
-- Import → Import → General → File System → Next → Browse → `C:\ti\TivaWare_C_Series-2.2.0.295\third_party\FreeRTOS\Source`
+- Import → Import → General → File System → Next → Browse → `\ti\TivaWare_C_Series-2.2.0.295\third_party\FreeRTOS\Source`
   - Select:
     - portable
       - CSS
@@ -159,13 +161,13 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
     - `timers.c`
   - Create top-level folder → Finish
 
-- Import → Import → General → File System → Next → Browse → `C:\ti\TivaWare_C_Series-2.2.0.295\utils`
+- Import → Import → General → File System → Next → Browse → `\ti\TivaWare_C_Series-2.2.0.295\utils`
   - Select:
     - `uartstdio.c`
     - `ustdlib.c`
   - Create top-level folder → Finish
 
-- Import → Import → General → File System → Next → Browse → `C:\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers`
+- Import → Import → General → File System → Next → Browse → `\ti\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\drivers`
   - Select:
     - `rtos_hw_drivers.c`
   - Create top-level folder → Finish
